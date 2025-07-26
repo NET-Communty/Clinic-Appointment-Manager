@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+
+.env
+.env.local
+.env.*.local
+
+/vendor/
+/node_modules/
+/storage/*.key
+
+/dist/
+/build/
+*.log
+*.tmp
+# Visual Studio
+.vs/
