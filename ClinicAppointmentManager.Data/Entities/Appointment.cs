@@ -16,6 +16,9 @@ namespace ClinicAppointmentManager.Core.Entities
         // Navigation properties
         public virtual Doctor Doctor { get; set; } = null!;
         public virtual Patient Patient { get; set; } = null!;
+        public int ClinicId { get; set; }
+        public Clinic Clinic { get; set; }
+
     }
-    
+
 }

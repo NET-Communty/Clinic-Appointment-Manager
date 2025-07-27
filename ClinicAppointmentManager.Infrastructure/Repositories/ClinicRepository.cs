@@ -1,12 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ClinicAppointmentManager.Core.Entities;
+using ClinicAppointmentManager.Core.Interfaces;
+using ClinicAppointmentManager.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
 
-namespace ClinicAppointmentManager.Infrastructure.Repositories
+public class ClinicRepository : IClinicRepository
 {
-    internal class ClinicRepository
+    private readonly ClinicDbContext _context;
+
+    public ClinicRepository(ClinicDbContext context)
     {
+        _context = context;
+    }
+
+    public async Task<IEnumerable<Clinic>> GetAllAsync()
+        => await _context.Clinics.ToListAsync();
+
+    public async Task<Clinic?> GetByIdAsync(int id)
+        => await _context.Clinics.FindAsync(id);
+
+    public async Task AddAsync(Clinic clinic)
+        => await _context.Clinics.AddAsync(clinic);
+
+    public Task UpdateAsync(Clinic clinic)
+    {
+        _context.Clinics.Update(clinic);
+        return Task.CompletedTask;
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        var clinic = await _context.Clinics.FindAsync(id);
+        if (clinic is not null)
+        {
+            _context.Clinics.Remove(clinic);
+        }
     }
 }

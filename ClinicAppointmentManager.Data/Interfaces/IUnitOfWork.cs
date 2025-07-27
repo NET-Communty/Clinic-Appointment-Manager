@@ -7,6 +7,6 @@
         IAppointmentRepository Appointments { get; }
         IClinicRepository Clinics { get; }
         ISpecialtyRepository Specialties { get; }
-        Task<int> SaveAsync();
+        Task<int> CompleteAsync();
     }
 }

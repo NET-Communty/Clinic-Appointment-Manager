@@ -1,1 +1,12 @@
-{"Version":1,"Hash":"AD8jmlPlA9pVFT1vR/9Jj4crvxEb6rRwDUJvXCPxoZg=","Source":"ClinicAppointmentManager.API","BasePath":"_content/ClinicAppointmentManager.API","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "AD8jmlPlA9pVFT1vR/9Jj4crvxEb6rRwDUJvXCPxoZg=",
+  "Source": "ClinicAppointmentManager.API",
+  "BasePath": "_content/ClinicAppointmentManager.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

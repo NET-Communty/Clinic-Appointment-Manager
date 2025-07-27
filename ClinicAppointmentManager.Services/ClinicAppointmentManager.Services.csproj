@@ -10,4 +10,10 @@
     <PackageReference Include="AutoMapper" Version="15.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClinicAppointmentManager.API\ClinicAppointmentManager.API.csproj" />
+    <ProjectReference Include="..\ClinicAppointmentManager.Data\ClinicAppointmentManager.Core.csproj" />
+    <ProjectReference Include="..\ClinicAppointmentManager.Infrastructure\ClinicAppointmentManager.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

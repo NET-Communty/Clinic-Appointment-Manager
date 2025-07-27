@@ -1,12 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using ClinicAppointmentManager.Core.Interfaces;
+using ClinicAppointmentManager.Infrastructure.Data;
+using ClinicAppointmentManager.Infrastructure.Repositories;
 using System.Threading.Tasks;
 
 namespace ClinicAppointmentManager.Infrastructure
 {
-    internal class UnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
+        private readonly ClinicDbContext _context;
+
+        public UnitOfWork(ClinicDbContext context)
+        {
+            _context = context;
+
+            Doctors = new DoctorRepository(_context);
+            Clinics = new ClinicRepository(_context);
+            Patients = new PatientRepository(_context);
+            Appointments = new AppointmentRepository(_context);
+            Specialties = new SpecialtyRepository(_context);
+        }
+
+        public IDoctorRepository Doctors { get; private set; }
+        public IClinicRepository Clinics { get; private set; }
+        public IPatientRepository Patients { get; private set; }
+        public IAppointmentRepository Appointments { get; private set; }
+        public ISpecialtyRepository Specialties { get; private set; }
+
+        public async Task<int> CompleteAsync()
+        {
+            return await _context.SaveChangesAsync();
+        }
+       
+
+        public void Dispose()
+        {
+            _context.Dispose();
+        }
     }
 }
