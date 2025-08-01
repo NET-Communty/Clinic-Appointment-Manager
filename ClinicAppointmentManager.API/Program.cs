@@ -1,17 +1,32 @@
-
+using ClinicAppointmentManager.Core.Dtos;
+using ClinicAppointmentManager.Core.Interfaces;
+using ClinicAppointmentManager.Infrastructure;
 using ClinicAppointmentManager.Infrastructure.Data;
+using ClinicAppointmentManager.Services;
+using ClinicAppointmentManager.Services.Interfaces;
+using ClinicAppointmentManager.Services.Validators;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddFluentValidationAutoValidation();
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<ClinicDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Register services
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IDoctorService, DoctorService>();
+
+builder.Services.AddValidatorsFromAssemblyContaining<DoctorPostDtoValidator>();
 
 var app = builder.Build();
 

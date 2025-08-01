@@ -33,3 +33,4 @@ C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Inf
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.pdb
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.genruntimeconfig.cache
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ref\ClinicAppointmentManager.Infrastructure.dll
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.sourcelink.json

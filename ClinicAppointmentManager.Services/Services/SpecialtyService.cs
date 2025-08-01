@@ -33,11 +33,8 @@ namespace ClinicAppointmentManager.Services
 
         public async Task DeleteAsync(int id)
         {
-            var specialty = await _unitOfWork.Specialties.GetByIdAsync(id);
-            if (specialty is null)
-                return;
 
-            await _unitOfWork.Specialties.DeleteAsync(specialty);
+            await _unitOfWork.Specialties.DeleteAsync(id);
             await _unitOfWork.CompleteAsync();
         }
 

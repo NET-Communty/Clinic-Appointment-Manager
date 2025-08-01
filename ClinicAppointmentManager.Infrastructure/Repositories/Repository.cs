@@ -20,14 +20,34 @@ namespace ClinicAppointmentManager.Infrastructure.Repositories
             _dbSet = _context.Set<T>();
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(int id, string includes = "")
         {
-            return await _dbSet.FindAsync(id);
+            IQueryable<T> query = _dbSet;
+
+            if (!string.IsNullOrEmpty(includes))
+            {
+                foreach (var include in includes.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(include.Trim());
+                }
+            }
+            var entity = await query.FirstOrDefaultAsync(e => EF.Property<int>(e, typeof(T).Name + "Id") == id);
+
+            return entity;
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public async Task<IEnumerable<T>> GetAllAsync(string icludes = "")
         {
-            return await _dbSet.ToListAsync();
+            var query = _dbSet.AsQueryable();
+
+            if (!string.IsNullOrEmpty(icludes))
+            {
+                foreach (var include in icludes.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(include.Trim());
+                }
+            }
+            return await query.ToListAsync();
         }
 
         public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
@@ -48,8 +68,13 @@ namespace ClinicAppointmentManager.Infrastructure.Repositories
             await Task.CompletedTask;
         }
 
-        public async Task DeleteAsync(T entity)
+        public async Task DeleteAsync(int Id)
         {
+            var entity = await _dbSet.FindAsync(Id);
+            if (entity == null)
+            {
+                throw new ArgumentException($"Entity with id {Id} not found.");
+            }
             _dbSet.Remove(entity);
             await Task.CompletedTask;
         }
