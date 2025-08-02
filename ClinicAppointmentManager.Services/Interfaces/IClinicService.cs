@@ -1,4 +1,4 @@
-﻿using ClinicAppointmentManager.Core.Entities;
+﻿using ClinicAppointmentManager.Core.Dtos;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -6,10 +6,10 @@ namespace ClinicAppointmentManager.Services.Interfaces
 {
     public interface IClinicService
     {
-        Task<IEnumerable<Clinic>> GetAllClinicsAsync();
-        Task<Clinic?> GetClinicByIdAsync(int id);
-        Task<Clinic> CreateClinicAsync(Clinic clinic);
-        Task UpdateClinicAsync(Clinic clinic);
-        Task DeleteClinicAsync(int id);
+        Task<IEnumerable<ClinicResponseDto>> GetAllAsync();
+        Task<ClinicResponseDto?> GetByIdAsync(int id);
+        Task<ClinicResponseDto> AddAsync(ClinicPostDto clinicDto);
+        Task UpdateAsync(int id, ClinicPutDto clinicDto);
+        Task DeleteAsync(int id);
     }
 }

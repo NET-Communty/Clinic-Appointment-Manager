@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using ClinicAppointmentManager.Core.Entities;
+﻿using Microsoft.AspNetCore.Mvc;
 using ClinicAppointmentManager.Services.Interfaces;
 using ClinicAppointmentManager.Core.Dtos;
-using ClinicAppointmentManager.Core.Interfaces;
 
 namespace ClinicAppointmentManager.API.Controllers
 {
@@ -12,12 +9,10 @@ namespace ClinicAppointmentManager.API.Controllers
     public class DoctorController : ControllerBase
     {
         private readonly IDoctorService _doctorService;
-        private readonly IUnitOfWork _unitOfWork;
 
-        public DoctorController(IDoctorService doctorService, IUnitOfWork unitOfWork)
+        public DoctorController(IDoctorService doctorService)
         {
             _doctorService = doctorService;
-            _unitOfWork = unitOfWork;
         }
 
         [HttpGet("All")]

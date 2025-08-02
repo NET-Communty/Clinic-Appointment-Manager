@@ -1,4 +1,3 @@
-using ClinicAppointmentManager.Core.Dtos;
 using ClinicAppointmentManager.Core.Interfaces;
 using ClinicAppointmentManager.Infrastructure;
 using ClinicAppointmentManager.Infrastructure.Data;
@@ -25,8 +24,12 @@ builder.Services.AddDbContext<ClinicDbContext>(options =>
 // Register services
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IDoctorService, DoctorService>();
+builder.Services.AddScoped<IClinicService, ClinicService>();
+builder.Services.AddScoped<ISpecialtyService, SpecialtyService>();
 
 builder.Services.AddValidatorsFromAssemblyContaining<DoctorPostDtoValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<ClinicPostDtoValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<SpecialtyPostDtoValidator>();
 
 var app = builder.Build();
 
