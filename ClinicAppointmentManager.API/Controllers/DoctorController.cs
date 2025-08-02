@@ -72,5 +72,44 @@ namespace ClinicAppointmentManager.API.Controllers
             }
 
         }
+
+        [HttpPut("Update/{Id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> Update(int Id, [FromBody] DoctorPutDto doctor)
+        {
+            if (doctor == null)
+            {
+                return BadRequest("Doctor data is null.");
+            }
+            try
+            {
+                await _doctorService.UpdateAsync(Id, doctor);
+                return Ok("Doctor updated successfully.");
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return BadRequest($"Error updating doctor: {ex.Message}");
+            }
+
+        }
+
+        [HttpDelete("Delete/{Id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> Delete(int Id)
+        {
+            try
+            {
+                await _doctorService.DeleteAsync(Id);
+                return Ok("Doctor deleted successfully.");
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound($"Error deleting doctor: {ex.Message}");
+            }
+        }
+
+
     }
 }

@@ -34,6 +34,11 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/openapi/v1.json", "Clinic Appointment Manager API V1");
+    });
 }
 
 app.UseHttpsRedirection();

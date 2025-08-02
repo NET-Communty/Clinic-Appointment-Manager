@@ -35,24 +35,21 @@ namespace ClinicAppointmentManager.Services
             return doctorDtos;
         }
 
-        public async Task<Doctor?> GetByIdAsync(int id) {
-            
+        public async Task<DoctorResponseDto?> GetByIdAsync(int id) 
+        {
             var doctor = await _unitOfWork.Doctors.GetByIdAsync(id, "Clinic,Specialty");
             if (doctor == null)
                 return null;
-            
-            return new Doctor
-            {
+
+            return new DoctorResponseDto {
                 DoctorId = doctor.DoctorId,
                 FirstName = doctor.FirstName,
                 LastName = doctor.LastName,
+                Email = doctor.Email,
                 LicenseNumber = doctor.LicenseNumber,
-                Specialty = doctor.Specialty,
-                Clinic = doctor.Clinic,
-                Email = doctor.Email
+                SpecialtyName = doctor.Specialty?.Name ?? string.Empty,
+                ClinicName = doctor.Clinic?.Name ?? string.Empty
             };
-
-
         }
         public async Task<DoctorResponseDto> AddAsync(DoctorPostDto doctor)
         {
@@ -91,9 +88,27 @@ namespace ClinicAppointmentManager.Services
             return response;
         }
 
-        public async Task UpdateAsync(Doctor doctor)
+        public async Task UpdateAsync(int id,DoctorPutDto doctorDto)
         {
-            await _unitOfWork.Doctors.UpdateAsync(doctor);
+            var existingDoctor = await _unitOfWork.Doctors.GetByIdAsync(id);
+            if (existingDoctor == null)
+                throw new KeyNotFoundException($"Doctor with ID {id} does not exist.");
+            // Validate if the clinic and specialty exist
+            var clinic = await _unitOfWork.Clinics.GetByIdAsync(doctorDto.ClinicId);
+            if (clinic == null)
+                throw new KeyNotFoundException($"Clinic with ID {doctorDto.ClinicId} does not exist.");
+            var specialty = await _unitOfWork.Specialties.GetByIdAsync(doctorDto.SpecialtyId);
+            if (specialty == null)
+                throw new KeyNotFoundException($"Specialty with ID {doctorDto.SpecialtyId} does not exist.");
+
+            existingDoctor.FirstName = doctorDto.FirstName;
+            existingDoctor.LastName = doctorDto.LastName;
+            existingDoctor.Email = doctorDto.Email;
+            existingDoctor.LicenseNumber = doctorDto.LicenseNumber;
+            existingDoctor.SpecialtyId = doctorDto.SpecialtyId;
+            existingDoctor.ClinicId = doctorDto.ClinicId;
+
+            await _unitOfWork.Doctors.UpdateAsync(existingDoctor);
             await _unitOfWork.CompleteAsync();
         }
 

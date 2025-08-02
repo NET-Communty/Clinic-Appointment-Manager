@@ -15,7 +15,8 @@
           "Microsoft.EntityFrameworkCore.Design": "9.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.7",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.7",
-          "Swashbuckle.AspNetCore": "9.0.3"
+          "Swashbuckle.AspNetCore": "9.0.3",
+          "Swashbuckle.AspNetCore.SwaggerUI": "9.0.3"
         },
         "runtime": {
           "ClinicAppointmentManager.API.dll": {}

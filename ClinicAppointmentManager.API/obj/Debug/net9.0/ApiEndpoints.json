@@ -85,5 +85,72 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ClinicAppointmentManager.API.Controllers.DoctorController",
+    "Method": "Delete",
+    "RelativePath": "api/Doctor/Delete/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "ClinicAppointmentManager.API.Controllers.DoctorController",
+    "Method": "Update",
+    "RelativePath": "api/Doctor/Update/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "doctor",
+        "Type": "ClinicAppointmentManager.Core.Dtos.DoctorPutDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
   }
 ]
