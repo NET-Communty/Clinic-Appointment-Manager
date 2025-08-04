@@ -1,10 +1,9 @@
-﻿using ClinicAppointmentManager.Core.Dtos;
+﻿using ClinicAppointmentManager.Core.Dtos.Clinic;
+using ClinicAppointmentManager.Core.Dtos.Doctor;
+using ClinicAppointmentManager.Core.Dtos.Specialty;
 using ClinicAppointmentManager.Core.Entities;
 using ClinicAppointmentManager.Core.Interfaces;
 using ClinicAppointmentManager.Services.Interfaces;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ClinicAppointmentManager.Services
 {

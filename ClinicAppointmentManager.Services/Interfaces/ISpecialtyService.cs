@@ -1,4 +1,6 @@
-﻿using ClinicAppointmentManager.Core.Dtos;
+﻿using ClinicAppointmentManager.Core.Dtos.Clinic;
+using ClinicAppointmentManager.Core.Dtos.Doctor;
+using ClinicAppointmentManager.Core.Dtos.Specialty;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

@@ -1,5 +1,5 @@
 using FluentValidation;
-using ClinicAppointmentManager.Core.Dtos;
+using ClinicAppointmentManager.Core.Dtos.Clinic;
 
 namespace ClinicAppointmentManager.Services.Validators
 {

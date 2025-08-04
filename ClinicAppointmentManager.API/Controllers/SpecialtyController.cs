@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using ClinicAppointmentManager.Services.Interfaces;
-using ClinicAppointmentManager.Core.Dtos;
+using ClinicAppointmentManager.Core.Dtos.Specialty;
 
 namespace ClinicAppointmentManager.API.Controllers
 {

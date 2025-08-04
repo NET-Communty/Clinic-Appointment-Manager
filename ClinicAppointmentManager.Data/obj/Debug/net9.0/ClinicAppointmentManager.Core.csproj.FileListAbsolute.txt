@@ -1,14 +1,3 @@
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\bin\Debug\net9.0\ClinicAppointmentManager.Core.deps.json
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\bin\Debug\net9.0\ClinicAppointmentManager.Core.dll
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\bin\Debug\net9.0\ClinicAppointmentManager.Core.pdb
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.AssemblyInfoInputs.cache
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.AssemblyInfo.cs
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.csproj.CoreCompileInputs.cache
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.dll
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\refint\ClinicAppointmentManager.Core.dll
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.pdb
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ref\ClinicAppointmentManager.Core.dll
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Data\bin\Debug\net9.0\ClinicAppointmentManager.Core.deps.json
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Data\bin\Debug\net9.0\ClinicAppointmentManager.Core.dll
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Data\bin\Debug\net9.0\ClinicAppointmentManager.Core.pdb
@@ -21,4 +10,15 @@ C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Dat
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Data\obj\Debug\net9.0\refint\ClinicAppointmentManager.Core.dll
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.pdb
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ref\ClinicAppointmentManager.Core.dll
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\bin\Debug\net9.0\ClinicAppointmentManager.Core.deps.json
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\bin\Debug\net9.0\ClinicAppointmentManager.Core.dll
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\bin\Debug\net9.0\ClinicAppointmentManager.Core.pdb
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.AssemblyInfoInputs.cache
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.AssemblyInfo.cs
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.csproj.CoreCompileInputs.cache
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.sourcelink.json
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.dll
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\refint\ClinicAppointmentManager.Core.dll
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.pdb
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ref\ClinicAppointmentManager.Core.dll

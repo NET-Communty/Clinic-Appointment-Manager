@@ -1,6 +1,6 @@
-namespace ClinicAppointmentManager.Core.Dtos
+namespace ClinicAppointmentManager.Core.Dtos.Clinic
 {
-    public class ClinicPutDto
+    public class ClinicPostDto
     {
         public string Name { get; set; } = string.Empty;
         public string Address { get; set; } = string.Empty;

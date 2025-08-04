@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ClinicAppointmentManager.Core.Dtos.Doctor;
+using ClinicAppointmentManager.Core.Entities;
+using ClinicAppointmentManager.Services;
 using ClinicAppointmentManager.Services.Interfaces;
-using ClinicAppointmentManager.Core.Dtos;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ClinicAppointmentManager.API.Controllers
 {
@@ -105,6 +107,83 @@ namespace ClinicAppointmentManager.API.Controllers
             }
         }
 
+        [HttpGet("{id}/Schedule")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetDoctorSchedule(int id)
+        {
+            try
+            {
+                var schedule = await _doctorService.GetDoctorSchedule(id);
+                return Ok(schedule);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
 
+
+        [HttpGet("BySpecialty/{specialtyId}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetBySpecialty(int specialtyId)
+        {
+            var doctors = await _doctorService.GetBySpecialtyAsync(specialtyId);
+            if (doctors == null || !doctors.Any())
+            {
+                return NotFound($"No doctors found for speciality Id = {specialtyId}.");
+            }
+            return Ok(doctors);
+        }
+
+        [HttpGet("ByClinic/{clinicId}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetByClinic(int clinicId)
+        {
+            var doctors = await _doctorService.GetByClinicAsync(clinicId);
+            if (doctors == null || !doctors.Any())
+            {
+                return NotFound($"No doctors found for clinic Id = {clinicId}.");
+            }
+            return Ok(doctors);
+        }
+
+        [HttpGet("{doctorId}/UpcomingAppointments")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetUpcomingAppointments(int doctorId, [FromQuery] DateTime? fromDate, [FromQuery] DateTime? toDate)
+        {
+            var appointments = await _doctorService.GetUpcomingAppointmentsAsync(doctorId, fromDate, toDate);
+            if (appointments == null || !appointments.Any())
+                return NotFound($"No appointments found for doctor Id = {doctorId}");
+            return Ok(appointments);
+        }
+
+        [HttpGet("{doctorId}/IsAvailable")]
+        public async Task<IActionResult> IsAvailable(int doctorId, [FromQuery] DateTime desiredDateTime, [FromQuery] int durationMinutes)
+        {
+            var available = await _doctorService.IsAvailableAsync(doctorId, desiredDateTime, durationMinutes);
+            return Ok(new { Available = available });
+        }
+
+        [HttpGet("{doctorId}/DailySchedule")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetDailySchedule(int doctorId, [FromQuery] DateTime date)
+        {
+            var schedule = await _doctorService.GetDailyScheduleAsync(doctorId, date);
+            if (schedule == null || !schedule.Any())
+                return NotFound($"No appointments found for doctor Id = {doctorId} in this date {date}");
+            return Ok(schedule);
+        }
+
+        [HttpGet("{doctorId}/WorkloadStats")]
+        public async Task<IActionResult> GetWorkloadStats(int doctorId, [FromQuery] DateTime? fromDate, [FromQuery] DateTime? toDate)
+        {
+            var stats = await _doctorService.GetWorkloadStatsAsync(doctorId, fromDate, toDate);
+            return Ok(stats);
+        }
     }
 }

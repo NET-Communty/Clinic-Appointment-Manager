@@ -1,4 +1,4 @@
-namespace ClinicAppointmentManager.Core.Dtos
+namespace ClinicAppointmentManager.Core.Dtos.Specialty
 {
     public class SpecialtyPutDto
     {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using ClinicAppointmentManager.Services.Interfaces;
-using ClinicAppointmentManager.Core.Dtos;
+using ClinicAppointmentManager.Core.Dtos.Clinic;
 
 namespace ClinicAppointmentManager.API.Controllers
 {
@@ -95,5 +95,33 @@ namespace ClinicAppointmentManager.API.Controllers
                 return BadRequest($"Error deleting clinic: {ex.Message}");
             }
         }
+
+        [HttpGet("{id}/Doctors")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetClinicDoctors(int id)
+        {
+            var doctors = await _clinicService.GetClinicDoctors(id);
+            if (doctors == null || !doctors.Any())
+            {
+                return NotFound($"No doctors found for clinic ID {id}.");
+            }
+            return Ok(doctors);
+        }
+
+        [HttpGet("{id}/Specialties")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetClinicSpecialties(int id)
+        {
+            var specialties = await _clinicService.GetClinicSpecialties(id);
+            if (specialties == null || !specialties.Any())
+            {
+                return NotFound($"No specialties found for clinic ID {id}.");
+            }
+            return Ok(specialties);
+        }
+
+        
     }
 }

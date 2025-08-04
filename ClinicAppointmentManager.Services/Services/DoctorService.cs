@@ -1,9 +1,8 @@
-﻿using ClinicAppointmentManager.Core.Dtos;
-using ClinicAppointmentManager.Core.Entities;
+﻿using ClinicAppointmentManager.Core.Entities;
 using ClinicAppointmentManager.Core.Interfaces;
 using ClinicAppointmentManager.Services.Interfaces;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using ClinicAppointmentManager.Core.Enums;
+using ClinicAppointmentManager.Core.Dtos.Doctor;
 
 namespace ClinicAppointmentManager.Services
 {
@@ -117,6 +116,143 @@ namespace ClinicAppointmentManager.Services
 
             await _unitOfWork.Doctors.DeleteAsync(id);
             await _unitOfWork.CompleteAsync();
+        }
+
+
+        public async Task<DoctorScheduleDto> GetDoctorSchedule(int doctorId)
+        {
+            var doctor = await _unitOfWork.Doctors.GetByIdAsync(doctorId, "Clinic,Specialty");
+            if (doctor == null)
+                throw new KeyNotFoundException($"Doctor with ID {doctorId} not found.");
+
+            // fetch doctor's appointments from database
+            var appointments = await _unitOfWork.Appointments.GetAllAsync();
+            var doctorAppointments = appointments.Where(a => a.DoctorId == doctorId);
+
+            var operatingHours = doctorAppointments
+                .GroupBy(a => new {
+                    DayOfWeek = a.AppointmentDate.DayOfWeek,
+                    Start = a.AppointmentDate.TimeOfDay,
+                    End = a.AppointmentDate.TimeOfDay.Add(TimeSpan.FromMinutes(a.DurationMinutes))
+                })
+                .Select(g => new OperatingHourDto
+                {
+                    DayOfWeek = g.Key.DayOfWeek.ToString(),
+                    OpenTime = g.Key.Start.ToString(@"hh\:mm"),
+                    CloseTime = g.Key.End.ToString(@"hh\:mm")
+                })
+                .Distinct()
+                .OrderBy(h => h.DayOfWeek)
+                .ThenBy(h => h.OpenTime)
+                .ToList();
+
+            var schedule = new DoctorScheduleDto
+            {
+                DoctorId = doctor.DoctorId,
+                DoctorName = $"{doctor.FirstName} {doctor.LastName}",
+                OperatingHours = operatingHours
+            };
+            return schedule;
+        }
+
+        public async Task<IEnumerable<DoctorResponseDto>> GetBySpecialtyAsync(int specialtyId)
+        {
+            var doctors = await _unitOfWork.Doctors.GetAllAsync("Clinic,Specialty");
+            var filtered = doctors.Where(d => d.SpecialtyId == specialtyId);
+            return filtered.Select(doctor => new DoctorResponseDto
+            {
+                DoctorId = doctor.DoctorId,
+                FirstName = doctor.FirstName,
+                LastName = doctor.LastName,
+                LicenseNumber = doctor.LicenseNumber,
+                SpecialtyName = doctor.Specialty?.Name ?? string.Empty,
+                ClinicName = doctor.Clinic?.Name ?? string.Empty,
+                Email = doctor.Email
+            });
+        }
+
+        public async Task<IEnumerable<DoctorResponseDto>> GetByClinicAsync(int clinicId)
+        {
+            var doctors = await _unitOfWork.Doctors.GetAllAsync("Clinic,Specialty");
+            var filtered = doctors.Where(d => d.ClinicId == clinicId);
+            return filtered.Select(doctor => new DoctorResponseDto
+            {
+                DoctorId = doctor.DoctorId,
+                FirstName = doctor.FirstName,
+                LastName = doctor.LastName,
+                LicenseNumber = doctor.LicenseNumber,
+                SpecialtyName = doctor.Specialty?.Name ?? string.Empty,
+                ClinicName = doctor.Clinic?.Name ?? string.Empty,
+                Email = doctor.Email
+            });
+        }
+
+        public async Task<IEnumerable<AppointmentDto>> GetUpcomingAppointmentsAsync(int doctorId, DateTime? fromDate, DateTime? toDate)
+        {
+            var appointments = await _unitOfWork.Appointments.GetAllAsync();
+            var filtered = appointments.Where(a => a.DoctorId == doctorId &&
+                (!fromDate.HasValue || a.AppointmentDate >= fromDate.Value) &&
+                (!toDate.HasValue || a.AppointmentDate <= toDate.Value));
+
+            return filtered.Select(a => new AppointmentDto
+            {
+                AppointmentId = a.AppointmentId,
+                DoctorId = a.DoctorId,
+                PatientId = a.PatientId,
+                AppointmentDate = a.AppointmentDate,
+                DurationMinutes = a.DurationMinutes,
+                Status = a.Status
+            });
+        }
+
+        public async Task<bool> IsAvailableAsync(int doctorId, DateTime desiredDateTime, int durationMinutes)
+        {
+            var appointments = await _unitOfWork.Appointments.GetAllAsync();
+            var doctorAppointments = appointments.Where(a => a.DoctorId == doctorId);
+            var desiredEnd = desiredDateTime.AddMinutes(durationMinutes);
+            foreach (var a in doctorAppointments)
+            {
+                var apptEnd = a.AppointmentDate.AddMinutes(a.DurationMinutes);
+                if (desiredDateTime < apptEnd && desiredEnd > a.AppointmentDate)
+                    return false;
+            }
+            return true;
+        }
+
+        public async Task<IEnumerable<AppointmentDto>> GetDailyScheduleAsync(int doctorId, DateTime date)
+        {
+            var appointments = await _unitOfWork.Appointments.GetAllAsync();
+            var filtered = appointments.Where(a => a.DoctorId == doctorId && a.AppointmentDate.Date == date.Date);
+            return filtered.Select(a => new AppointmentDto
+            {
+                AppointmentId = a.AppointmentId,
+                DoctorId = a.DoctorId,
+                PatientId = a.PatientId,
+                AppointmentDate = a.AppointmentDate,
+                DurationMinutes = a.DurationMinutes,
+                Status = a.Status
+            });
+        }
+
+        public async Task<DoctorWorkloadStatsDto> GetWorkloadStatsAsync(int doctorId, DateTime? fromDate, DateTime? toDate)
+        {
+            var appointments = await _unitOfWork.Appointments.GetAllAsync();
+
+            var filtered = appointments
+                .Where(a => a.DoctorId == doctorId 
+                && (!fromDate.HasValue || a.AppointmentDate >= fromDate.Value)
+                && (!fromDate.HasValue || a.AppointmentDate <= toDate.Value));
+
+            int totalAppointments = filtered.Count();
+            int totalMinutes = filtered.Sum(a => a.DurationMinutes);
+            int cancellations = filtered.Count(a => a.Status == enAppointmentStatus.Cancelled);
+            return new DoctorWorkloadStatsDto
+            {
+                DoctorId = doctorId,
+                TotalAppointments = totalAppointments,
+                TotalHoursWorked = totalMinutes / 60.0,
+                Cancellations = cancellations
+            };
         }
     }
 }

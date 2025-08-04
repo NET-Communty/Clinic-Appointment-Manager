@@ -1,4 +1,6 @@
-﻿using ClinicAppointmentManager.Core.Dtos;
+﻿using ClinicAppointmentManager.Core.Dtos.Clinic;
+using ClinicAppointmentManager.Core.Dtos.Doctor;
+using ClinicAppointmentManager.Core.Dtos.Specialty;
 using ClinicAppointmentManager.Core.Entities;
 using ClinicAppointmentManager.Core.Interfaces;
 using ClinicAppointmentManager.Services.Interfaces;
@@ -80,6 +82,36 @@ namespace ClinicAppointmentManager.Services
                 throw new KeyNotFoundException($"Clinic with ID {id} not found.");
             await _unitOfWork.Clinics.DeleteAsync(clinic.ClinicId);
             await _unitOfWork.CompleteAsync();
+        }
+
+        public async Task<IEnumerable<DoctorResponseDto>> GetClinicDoctors(int id)
+        {
+            var doctors = await _unitOfWork.Doctors.GetAllAsync("Clinic,Specialty");
+            return doctors.Where(d => d.ClinicId == id).Select(doctor => new DoctorResponseDto
+            {
+                DoctorId = doctor.DoctorId,
+                FirstName = doctor.FirstName,
+                LastName = doctor.LastName,
+                Email = doctor.Email,
+                LicenseNumber = doctor.LicenseNumber,
+                SpecialtyName = doctor.Specialty?.Name ?? string.Empty,
+                ClinicName = doctor.Clinic?.Name ?? string.Empty
+            });
+        }
+
+        public async Task<IEnumerable<SpecialtyResponseDto>> GetClinicSpecialties(int id)
+        {
+            var doctors = await _unitOfWork.Doctors.GetAllAsync("Clinic,Specialty");
+            var specialties = doctors.Where(d => d.ClinicId == id && d.Specialty != null)
+                .Select(d => d.Specialty)
+                .Distinct()
+                .Select(s => new SpecialtyResponseDto
+                {
+                    SpecialtyId = s.SpecialtyId,
+                    Name = s.Name,
+                    Description = s.Description
+                });
+            return specialties;
         }
     }
 }

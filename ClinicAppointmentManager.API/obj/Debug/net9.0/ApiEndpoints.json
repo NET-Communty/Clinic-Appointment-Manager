@@ -32,6 +32,68 @@
   },
   {
     "ContainingType": "ClinicAppointmentManager.API.Controllers.ClinicController",
+    "Method": "GetClinicDoctors",
+    "RelativePath": "api/Clinic/{id}/Doctors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ClinicAppointmentManager.API.Controllers.ClinicController",
+    "Method": "GetClinicSpecialties",
+    "RelativePath": "api/Clinic/{id}/Specialties",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ClinicAppointmentManager.API.Controllers.ClinicController",
     "Method": "Add",
     "RelativePath": "api/Clinic/Add",
     "HttpMethod": "POST",
@@ -40,7 +102,7 @@
     "Parameters": [
       {
         "Name": "clinic",
-        "Type": "ClinicAppointmentManager.Core.Dtos.ClinicPostDto",
+        "Type": "ClinicAppointmentManager.Core.Dtos.Clinic.ClinicPostDto",
         "IsRequired": true
       }
     ],
@@ -123,7 +185,7 @@
       },
       {
         "Name": "clinic",
-        "Type": "ClinicAppointmentManager.Core.Dtos.ClinicPutDto",
+        "Type": "ClinicAppointmentManager.Core.Dtos.Clinic.ClinicPutDto",
         "IsRequired": true
       }
     ],
@@ -146,8 +208,153 @@
   },
   {
     "ContainingType": "ClinicAppointmentManager.API.Controllers.DoctorController",
+    "Method": "GetDailySchedule",
+    "RelativePath": "api/Doctor/{doctorId}/DailySchedule",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClinicAppointmentManager.API.Controllers.DoctorController",
+    "Method": "IsAvailable",
+    "RelativePath": "api/Doctor/{doctorId}/IsAvailable",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "desiredDateTime",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "durationMinutes",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClinicAppointmentManager.API.Controllers.DoctorController",
+    "Method": "GetUpcomingAppointments",
+    "RelativePath": "api/Doctor/{doctorId}/UpcomingAppointments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "fromDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "toDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ClinicAppointmentManager.API.Controllers.DoctorController",
+    "Method": "GetWorkloadStats",
+    "RelativePath": "api/Doctor/{doctorId}/WorkloadStats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "fromDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "toDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ClinicAppointmentManager.API.Controllers.DoctorController",
     "Method": "GetById",
     "RelativePath": "api/Doctor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ClinicAppointmentManager.API.Controllers.DoctorController",
+    "Method": "GetDoctorSchedule",
+    "RelativePath": "api/Doctor/{id}/Schedule",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -185,7 +392,7 @@
     "Parameters": [
       {
         "Name": "doctor",
-        "Type": "ClinicAppointmentManager.Core.Dtos.DoctorPostDto",
+        "Type": "ClinicAppointmentManager.Core.Dtos.Doctor.DoctorPostDto",
         "IsRequired": true
       }
     ],
@@ -214,6 +421,68 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ClinicAppointmentManager.API.Controllers.DoctorController",
+    "Method": "GetByClinic",
+    "RelativePath": "api/Doctor/ByClinic/{clinicId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clinicId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ClinicAppointmentManager.API.Controllers.DoctorController",
+    "Method": "GetBySpecialty",
+    "RelativePath": "api/Doctor/BySpecialty/{specialtyId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "specialtyId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
@@ -277,7 +546,7 @@
       },
       {
         "Name": "doctor",
-        "Type": "ClinicAppointmentManager.Core.Dtos.DoctorPutDto",
+        "Type": "ClinicAppointmentManager.Core.Dtos.Doctor.DoctorPutDto",
         "IsRequired": true
       }
     ],
@@ -401,7 +670,7 @@
     "Parameters": [
       {
         "Name": "specialty",
-        "Type": "ClinicAppointmentManager.Core.Dtos.SpecialtyPostDto",
+        "Type": "ClinicAppointmentManager.Core.Dtos.Specialty.SpecialtyPostDto",
         "IsRequired": true
       }
     ],
@@ -484,7 +753,7 @@
       },
       {
         "Name": "specialty",
-        "Type": "ClinicAppointmentManager.Core.Dtos.SpecialtyPutDto",
+        "Type": "ClinicAppointmentManager.Core.Dtos.Specialty.SpecialtyPutDto",
         "IsRequired": true
       }
     ],
