@@ -1,20 +1,3 @@
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.deps.json
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.runtimeconfig.json
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.dll
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.pdb
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Core.dll
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Core.pdb
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.csproj.AssemblyReference.cache
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.AssemblyInfo.cs
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAp.F6AFE3CD.Up2Date
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.dll
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\refint\ClinicAppointmentManager.Infrastructure.dll
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.pdb
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.genruntimeconfig.cache
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ref\ClinicAppointmentManager.Infrastructure.dll
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.deps.json
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.runtimeconfig.json
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.dll
@@ -33,3 +16,21 @@ C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Inf
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.pdb
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.genruntimeconfig.cache
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ref\ClinicAppointmentManager.Infrastructure.dll
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.deps.json
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.runtimeconfig.json
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.dll
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.pdb
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Core.dll
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\bin\Debug\net9.0\ClinicAppointmentManager.Core.pdb
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.AssemblyInfo.cs
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.sourcelink.json
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAp.F6AFE3CD.Up2Date
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.dll
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\refint\ClinicAppointmentManager.Infrastructure.dll
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.pdb
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ClinicAppointmentManager.Infrastructure.genruntimeconfig.cache
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.Infrastructure\obj\Debug\net9.0\ref\ClinicAppointmentManager.Infrastructure.dll

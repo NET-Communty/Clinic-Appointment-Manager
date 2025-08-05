@@ -8,10 +8,10 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="15.0.0" />
+    <PackageReference Include="FluentValidation" Version="9.0.7" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClinicAppointmentManager.API\ClinicAppointmentManager.API.csproj" />
     <ProjectReference Include="..\ClinicAppointmentManager.Data\ClinicAppointmentManager.Core.csproj" />
     <ProjectReference Include="..\ClinicAppointmentManager.Infrastructure\ClinicAppointmentManager.Infrastructure.csproj" />
   </ItemGroup>

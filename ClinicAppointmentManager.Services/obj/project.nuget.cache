@@ -1,14 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ExioUtOIyKE=",
+  "dgSpecHash": "3qgSjW7Pi8k=",
   "success": true,
   "projectFilePath": "C:\\Users\\pc\\Source\\Repos\\Clinic-Appointment-Manager\\ClinicAppointmentManager.Services\\ClinicAppointmentManager.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\15.0.0\\automapper.15.0.0.nupkg.sha512",
-    "C:\\Users\\pc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
-    "C:\\Users\\pc\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\fluentvalidation\\9.1.0\\fluentvalidation.9.1.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.6\\microsoft.data.sqlclient.5.1.6.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.1\\microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
@@ -17,7 +16,6 @@
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.7\\microsoft.entityframeworkcore.analyzers.9.0.7.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.7\\microsoft.entityframeworkcore.relational.9.0.7.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.7\\microsoft.entityframeworkcore.sqlserver.9.0.7.nupkg.sha512",
-    "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.7\\microsoft.extensions.caching.abstractions.9.0.7.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.7\\microsoft.extensions.caching.memory.9.0.7.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.7\\microsoft.extensions.configuration.abstractions.9.0.7.nupkg.sha512",
@@ -35,13 +33,8 @@
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.35.0\\microsoft.identitymodel.protocols.6.35.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.35.0\\microsoft.identitymodel.protocols.openidconnect.6.35.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.0.1\\microsoft.identitymodel.tokens.8.0.1.nupkg.sha512",
-    "C:\\Users\\pc\\.nuget\\packages\\microsoft.openapi\\1.6.23\\microsoft.openapi.1.6.23.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
-    "C:\\Users\\pc\\.nuget\\packages\\swashbuckle.aspnetcore\\9.0.3\\swashbuckle.aspnetcore.9.0.3.nupkg.sha512",
-    "C:\\Users\\pc\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.3\\swashbuckle.aspnetcore.swagger.9.0.3.nupkg.sha512",
-    "C:\\Users\\pc\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.3\\swashbuckle.aspnetcore.swaggergen.9.0.3.nupkg.sha512",
-    "C:\\Users\\pc\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.3\\swashbuckle.aspnetcore.swaggerui.9.0.3.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
@@ -66,11 +59,13 @@
   ],
   "logs": [
     {
-      "code": "NU1608",
+      "code": "NU1603",
       "level": "Warning",
+      "message": "ClinicAppointmentManager.Services depends on FluentValidation (>= 9.0.7) but FluentValidation 9.0.7 was not found. FluentValidation 9.1.0 was resolved instead.",
+      "projectPath": "C:\\Users\\pc\\Source\\Repos\\Clinic-Appointment-Manager\\ClinicAppointmentManager.Services\\ClinicAppointmentManager.Services.csproj",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 15.0.0 was resolved.",
-      "libraryId": "AutoMapper",
+      "filePath": "C:\\Users\\pc\\Source\\Repos\\Clinic-Appointment-Manager\\ClinicAppointmentManager.Services\\ClinicAppointmentManager.Services.csproj",
+      "libraryId": "FluentValidation",
       "targetGraphs": [
         "net9.0"
       ]

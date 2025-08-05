@@ -19,7 +19,6 @@ namespace ClinicAppointmentManager.Infrastructure.Repositories
             return await _context.Appointments
                 .Include(a => a.Doctor)
                 .Include(a => a.Patient)
-                .Include(a => a.Clinic)
                 .ToListAsync();
         }
     }
