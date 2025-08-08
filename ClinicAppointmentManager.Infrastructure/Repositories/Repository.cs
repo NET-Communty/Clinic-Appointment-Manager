@@ -1,4 +1,5 @@
-﻿using ClinicAppointmentManager.Core.Interfaces;
+﻿using ClinicAppointmentManager.Core.Constants;
+using ClinicAppointmentManager.Core.Interfaces;
 using ClinicAppointmentManager.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -36,7 +37,7 @@ namespace ClinicAppointmentManager.Infrastructure.Repositories
             return entity;
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync(string icludes = "")
+        public async Task<IEnumerable<T>> GetAllAsync(string icludes = "", int page = 1)
         {
             var query = _dbSet.AsQueryable();
 
@@ -47,6 +48,13 @@ namespace ClinicAppointmentManager.Infrastructure.Repositories
                     query = query.Include(include.Trim());
                 }
             }
+
+            if (page > 0)
+            {
+                int pageSize = ConstantNumbers.DefaultPageSize;
+                query = query.Skip((page - 1) * pageSize).Take(pageSize);
+            }
+
             return await query.ToListAsync();
         }
 

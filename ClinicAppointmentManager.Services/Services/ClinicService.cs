@@ -19,9 +19,9 @@ namespace ClinicAppointmentManager.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IEnumerable<ClinicResponseDto>> GetAllAsync()
+        public async Task<IEnumerable<ClinicResponseDto>> GetAllAsync(int page = 1)
         {
-            var clinics = await _unitOfWork.Clinics.GetAllAsync();
+            var clinics = await _unitOfWork.Clinics.GetAllAsync("", page);
             return clinics.Select(c => new ClinicResponseDto
             {
                 ClinicId = c.ClinicId,

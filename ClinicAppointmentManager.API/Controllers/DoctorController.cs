@@ -1,4 +1,5 @@
-﻿using ClinicAppointmentManager.Core.Dtos.Doctor;
+﻿using ClinicAppointmentManager.Core.Constants;
+using ClinicAppointmentManager.Core.Dtos.Doctor;
 using ClinicAppointmentManager.Core.Entities;
 using ClinicAppointmentManager.Services;
 using ClinicAppointmentManager.Services.Interfaces;
@@ -20,9 +21,9 @@ namespace ClinicAppointmentManager.API.Controllers
         [HttpGet("All")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetAll() // return Doctor Dto list
+        public async Task<IActionResult> GetAll(int page = 1) // return Doctor Dto list
         {
-            var doctors = await _doctorService.GetAllAsync();
+            var doctors = await _doctorService.GetAllAsync(page);
 
             if (doctors == null || !doctors.Any())
             {

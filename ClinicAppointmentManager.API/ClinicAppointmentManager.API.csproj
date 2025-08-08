@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+	<ProjectReference Include="..\ClinicAppointmentManager.Data\ClinicAppointmentManager.Core.csproj" />
 	<ProjectReference Include="..\ClinicAppointmentManager.Services\ClinicAppointmentManager.Services.csproj" />
   </ItemGroup>
 

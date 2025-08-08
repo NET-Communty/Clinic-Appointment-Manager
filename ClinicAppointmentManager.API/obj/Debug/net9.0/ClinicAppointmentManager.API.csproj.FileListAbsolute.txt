@@ -166,6 +166,16 @@ C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\ClinicAppointmentManager.API.pdb
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\ClinicAppointmentManager.API.genruntimeconfig.cache
 C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\ref\ClinicAppointmentManager.API.dll
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\ClinicAppointmentManager.Services.dll
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\ClinicAppointmentManager.Services.pdb
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\obj\Debug\net9.0\ClinicAppointmentManager.API.csproj.AssemblyReference.cache
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\obj\Debug\net9.0\rpswa.dswa.cache.json
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\obj\Debug\net9.0\ClinicAppointmentManager.API.GeneratedMSBuildEditorConfig.editorconfig
@@ -325,8 +335,8 @@ C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppoint
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\bin\Debug\net9.0\ClinicAppointmentManager.Core.dll
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.dll
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\bin\Debug\net9.0\ClinicAppointmentManager.Services.dll
-C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\bin\Debug\net9.0\ClinicAppointmentManager.Services.pdb
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\bin\Debug\net9.0\ClinicAppointmentManager.Core.pdb
+C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\bin\Debug\net9.0\ClinicAppointmentManager.Services.pdb
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\bin\Debug\net9.0\ClinicAppointmentManager.Infrastructure.pdb
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
@@ -343,13 +353,3 @@ C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppoint
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\obj\Debug\net9.0\ClinicAppointmentManager.API.pdb
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\obj\Debug\net9.0\ClinicAppointmentManager.API.genruntimeconfig.cache
 C:\Users\Ahmed Alian\source\repos\backend\ClinicAppointmentManager\ClinicAppointmentManager.API\obj\Debug\net9.0\ref\ClinicAppointmentManager.API.dll
-C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\rpswa.dswa.cache.json
-C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\FluentValidation.dll
-C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
-C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
-C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\ClinicAppointmentManager.Services.dll
-C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\ClinicAppointmentManager.Services.pdb
-C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\rjimswa.dswa.cache.json
-C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
-C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
-C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\obj\Debug\net9.0\staticwebassets.build.json.cache

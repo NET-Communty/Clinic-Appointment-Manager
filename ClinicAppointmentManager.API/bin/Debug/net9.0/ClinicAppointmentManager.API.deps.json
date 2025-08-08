@@ -9,6 +9,7 @@
       "ClinicAppointmentManager.API/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "ClinicAppointmentManager.Core": "1.0.0",
           "ClinicAppointmentManager.Services": "1.0.0",
           "FluentValidation.AspNetCore": "11.3.1",
           "Microsoft.AspNetCore.OpenApi": "9.0.7",

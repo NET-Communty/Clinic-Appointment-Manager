@@ -19,9 +19,9 @@ namespace ClinicAppointmentManager.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IEnumerable<AppointmentResponseDto>> GetAllAsync()
+        public async Task<IEnumerable<AppointmentResponseDto>> GetAllAsync(int page =1)
         {
-            var appointments = await _unitOfWork.Appointments.GetAllAsync("Doctor,Patient");
+            var appointments = await _unitOfWork.Appointments.GetAllAsync("Doctor,Patient", page);
 
             return appointments.Select(a => new AppointmentResponseDto
             {

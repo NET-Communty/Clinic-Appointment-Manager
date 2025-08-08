@@ -16,9 +16,9 @@ namespace ClinicAppointmentManager.API.Controllers
             _appointmentService = appointmentService;
         }
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int page = 1)
         {
-            var appointments = await _appointmentService.GetAllAsync();
+            var appointments = await _appointmentService.GetAllAsync(page);
             return Ok(appointments);
         }
         [HttpGet("{id}")]
