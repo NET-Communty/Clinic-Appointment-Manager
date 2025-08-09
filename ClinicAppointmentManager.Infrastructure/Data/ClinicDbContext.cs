@@ -1,11 +1,11 @@
 ﻿using ClinicAppointmentManager.Core.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System;
+
 
 namespace ClinicAppointmentManager.Infrastructure.Data
 {
-    public class ClinicDbContext : DbContext
+    public class ClinicDbContext : IdentityDbContext<ApplicationUser>
     {
         public ClinicDbContext(DbContextOptions<ClinicDbContext> options) : base(options) { }
         public ClinicDbContext() { }
@@ -22,6 +22,7 @@ namespace ClinicAppointmentManager.Infrastructure.Data
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Clinic> Clinics { get; set; }
         public DbSet<Specialty> Specialties { get; set; }
+        
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

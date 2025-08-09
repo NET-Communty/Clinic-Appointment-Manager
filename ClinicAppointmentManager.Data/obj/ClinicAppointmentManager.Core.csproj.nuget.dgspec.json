@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ahmed Alian\\source\\repos\\backend\\ClinicAppointmentManager\\ClinicAppointmentManager.Data\\ClinicAppointmentManager.Core.csproj": {}
+    "C:\\Users\\Ahmed Alian\\source\\repos\\backend\\clinc-appointment-manager-clone-v01\\ClinicAppointmentManager.Data\\ClinicAppointmentManager.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ahmed Alian\\source\\repos\\backend\\ClinicAppointmentManager\\ClinicAppointmentManager.Data\\ClinicAppointmentManager.Core.csproj": {
+    "C:\\Users\\Ahmed Alian\\source\\repos\\backend\\clinc-appointment-manager-clone-v01\\ClinicAppointmentManager.Data\\ClinicAppointmentManager.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ahmed Alian\\source\\repos\\backend\\ClinicAppointmentManager\\ClinicAppointmentManager.Data\\ClinicAppointmentManager.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmed Alian\\source\\repos\\backend\\clinc-appointment-manager-clone-v01\\ClinicAppointmentManager.Data\\ClinicAppointmentManager.Core.csproj",
         "projectName": "ClinicAppointmentManager.Core",
-        "projectPath": "C:\\Users\\Ahmed Alian\\source\\repos\\backend\\ClinicAppointmentManager\\ClinicAppointmentManager.Data\\ClinicAppointmentManager.Core.csproj",
+        "projectPath": "C:\\Users\\Ahmed Alian\\source\\repos\\backend\\clinc-appointment-manager-clone-v01\\ClinicAppointmentManager.Data\\ClinicAppointmentManager.Core.csproj",
         "packagesPath": "C:\\Users\\Ahmed Alian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ahmed Alian\\source\\repos\\backend\\ClinicAppointmentManager\\ClinicAppointmentManager.Data\\obj\\",
+        "outputPath": "C:\\Users\\Ahmed Alian\\source\\repos\\backend\\clinc-appointment-manager-clone-v01\\ClinicAppointmentManager.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -3,12 +3,14 @@ using ClinicAppointmentManager.Core.Dtos.Doctor;
 using ClinicAppointmentManager.Core.Entities;
 using ClinicAppointmentManager.Services;
 using ClinicAppointmentManager.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClinicAppointmentManager.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class DoctorController : ControllerBase
     {
         private readonly IDoctorService _doctorService;
