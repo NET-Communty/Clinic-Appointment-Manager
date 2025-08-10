@@ -13,5 +13,7 @@ namespace ClinicAppointmentManager.Core.Entities
 
         // Navigation properties
         public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
+        public virtual ICollection<MedicalHistory> MedicalHistories { get; set; } = new List<MedicalHistory>();
+
     }
 }

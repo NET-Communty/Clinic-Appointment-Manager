@@ -537,3 +537,9 @@ C:\Users\Ahmed Alian\source\repos\backend\clinc-appointment-manager-clone-v01\Cl
 C:\Users\Ahmed Alian\source\repos\backend\clinc-appointment-manager-clone-v01\ClinicAppointmentManager.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Ahmed Alian\source\repos\backend\clinc-appointment-manager-clone-v01\ClinicAppointmentManager.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Ahmed Alian\source\repos\backend\clinc-appointment-manager-clone-v01\ClinicAppointmentManager.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.API\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll

@@ -35,3 +35,4 @@ C:\Users\Ahmed Alian\source\repos\backend\clinc-appointment-manager-clone-v01\Cl
 C:\Users\Ahmed Alian\source\repos\backend\clinc-appointment-manager-clone-v01\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.pdb
 C:\Users\Ahmed Alian\source\repos\backend\clinc-appointment-manager-clone-v01\ClinicAppointmentManager.Data\obj\Debug\net9.0\ref\ClinicAppointmentManager.Core.dll
 C:\Users\Ahmed Alian\source\repos\backend\clinc-appointment-manager-clone-v01\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.csproj.AssemblyReference.cache
+C:\Users\pc\Source\Repos\Clinic-Appointment-Manager\ClinicAppointmentManager.Data\obj\Debug\net9.0\ClinicAppointmentManager.Core.csproj.AssemblyReference.cache

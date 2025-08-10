@@ -1,7 +1,8 @@
-﻿using ClinicAppointmentManager.Core.Interfaces;
+﻿using System.Threading.Tasks;
+using ClinicAppointmentManager.Core.Entities;
+using ClinicAppointmentManager.Core.Interfaces;
 using ClinicAppointmentManager.Infrastructure.Data;
 using ClinicAppointmentManager.Infrastructure.Repositories;
-using System.Threading.Tasks;
 
 namespace ClinicAppointmentManager.Infrastructure
 {
@@ -18,6 +19,8 @@ namespace ClinicAppointmentManager.Infrastructure
             Patients = new PatientRepository(_context);
             Appointments = new AppointmentRepository(_context);
             Specialties = new SpecialtyRepository(_context);
+            MedicalHistories = new Repository<MedicalHistory>(_context);
+
         }
 
         public IDoctorRepository Doctors { get; private set; }
@@ -25,9 +28,12 @@ namespace ClinicAppointmentManager.Infrastructure
         public IPatientRepository Patients { get; private set; }
         public IAppointmentRepository Appointments { get; private set; }
         public ISpecialtyRepository Specialties { get; private set; }
+        public IRepository<MedicalHistory> MedicalHistories { get; private set; }
+
 
         public async Task<int> CompleteAsync()
         {
+
             return await _context.SaveChangesAsync();
         }
        

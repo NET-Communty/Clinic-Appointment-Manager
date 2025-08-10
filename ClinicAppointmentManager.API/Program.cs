@@ -121,6 +121,7 @@ builder.Services.AddScoped<IClinicService, ClinicService>();
 builder.Services.AddScoped<ISpecialtyService, SpecialtyService>();
 builder.Services.AddScoped<IAppointmentService, AppointmentService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IPatientService, PatientService>();
 
 
 builder.Services.AddValidatorsFromAssemblyContaining<DoctorPostDtoValidator>();
@@ -128,8 +129,15 @@ builder.Services.AddValidatorsFromAssemblyContaining<ClinicPostDtoValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<SpecialtyPostDtoValidator>();
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "ClinicAppointmentManager API V1");
+        c.RoutePrefix = string.Empty;
+    });
+}
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();

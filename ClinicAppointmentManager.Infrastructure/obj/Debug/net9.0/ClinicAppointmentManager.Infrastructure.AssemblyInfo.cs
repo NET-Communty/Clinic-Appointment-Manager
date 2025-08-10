@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClinicAppointmentManager.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0f9bb87435725f97f8220e46251e6ff3a23e933")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+defd130ef7d0575b93b9bc9e1275022a8d259906")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClinicAppointmentManager.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClinicAppointmentManager.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
