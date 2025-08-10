@@ -1,17 +1,19 @@
 ﻿using ClinicAppointmentManager.Core.Entities;
 using ClinicAppointmentManager.Core.Interfaces;
 using ClinicAppointmentManager.Infrastructure.Data;
+using ClinicAppointmentManager.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 
-public class ClinicRepository : IClinicRepository
+public class ClinicRepository : Repository<Clinic>, IClinicRepository
 {
     private readonly ClinicDbContext _context;
 
-    public ClinicRepository(ClinicDbContext context)
+    public ClinicRepository(ClinicDbContext context) : base(context)
     {
         _context = context;
     }
+
 
     public async Task<IEnumerable<Clinic>> GetAllAsync()
         => await _context.Clinics.ToListAsync();

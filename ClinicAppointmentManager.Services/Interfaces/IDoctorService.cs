@@ -7,7 +7,7 @@ namespace ClinicAppointmentManager.Services.Interfaces
 {
     public interface IDoctorService
     {
-        Task<IEnumerable<DoctorResponseDto>> GetAllAsync();
+        Task<IEnumerable<DoctorResponseDto>> GetAllAsync(int page = 1);
         Task<DoctorResponseDto?> GetByIdAsync(int id);
         Task<DoctorResponseDto> AddAsync(DoctorPostDto doctor);
         Task UpdateAsync(int id,DoctorPutDto doctor);

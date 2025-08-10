@@ -1,13 +1,16 @@
-﻿using ClinicAppointmentManager.Core.Dtos.Doctor;
+﻿using ClinicAppointmentManager.Core.Constants;
+using ClinicAppointmentManager.Core.Dtos.Doctor;
 using ClinicAppointmentManager.Core.Entities;
 using ClinicAppointmentManager.Services;
 using ClinicAppointmentManager.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClinicAppointmentManager.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class DoctorController : ControllerBase
     {
         private readonly IDoctorService _doctorService;
@@ -20,9 +23,9 @@ namespace ClinicAppointmentManager.API.Controllers
         [HttpGet("All")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetAll() // return Doctor Dto list
+        public async Task<IActionResult> GetAll(int page = 1) // return Doctor Dto list
         {
-            var doctors = await _doctorService.GetAllAsync();
+            var doctors = await _doctorService.GetAllAsync(page);
 
             if (doctors == null || !doctors.Any())
             {

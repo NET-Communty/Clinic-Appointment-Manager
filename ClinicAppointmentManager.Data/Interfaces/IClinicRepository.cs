@@ -4,12 +4,8 @@ using ClinicAppointmentManager.Core.Entities;
 
 namespace ClinicAppointmentManager.Core.Interfaces
 {
-    public interface IClinicRepository
+    public interface IClinicRepository : IRepository<Clinic>
     {
-        Task<IEnumerable<Clinic>> GetAllAsync();
-        Task<Clinic?> GetByIdAsync(int id);
-        Task AddAsync(Clinic clinic);
-        Task UpdateAsync(Clinic clinic);
-        Task DeleteAsync(int id);
+
     }
 }

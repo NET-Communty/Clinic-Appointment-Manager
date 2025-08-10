@@ -32,6 +32,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "C:\\Users\\pc\\Source\\Repos\\Clinic-Appointment-Manager\\ClinicAppointmentManager.Data\\ClinicAppointmentManager.Core.csproj": {
+                "projectPath": "C:\\Users\\pc\\Source\\Repos\\Clinic-Appointment-Manager\\ClinicAppointmentManager.Data\\ClinicAppointmentManager.Core.csproj"
+              },
               "C:\\Users\\pc\\Source\\Repos\\Clinic-Appointment-Manager\\ClinicAppointmentManager.Services\\ClinicAppointmentManager.Services.csproj": {
                 "projectPath": "C:\\Users\\pc\\Source\\Repos\\Clinic-Appointment-Manager\\ClinicAppointmentManager.Services\\ClinicAppointmentManager.Services.csproj"
               }
@@ -61,6 +64,10 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.7, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -159,6 +166,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

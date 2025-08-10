@@ -18,9 +18,9 @@ namespace ClinicAppointmentManager.API.Controllers
         [HttpGet("All")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int page = 1)
         {
-            var specialties = await _specialtyService.GetAllAsync();
+            var specialties = await _specialtyService.GetAllAsync(page);
             if (specialties == null || !specialties.Any())
             {
                 return NotFound("No specialties found.");

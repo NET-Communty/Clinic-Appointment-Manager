@@ -1,37 +1,18 @@
 # Clinic Appointment Manager
 
-## Solution Structure
-- **ClinicAppointmentManager.API**: ASP.NET Core Web API project. No controllers/endpoints implemented yet.
-- **ClinicAppointmentManager.Data (Core)**: Contains domain entities, enums, and repository interfaces. Defines the core business model:
-  - **Entities**: `Clinic`, `Doctor`, `Patient`, `Appointment`, `Specialty`, and a base entity for audit fields.
-  - **Enums**: Appointment status enum.
-  - **Interfaces**: Generic repository, specific repositories for each entity, and a Unit of Work interface.
-- **ClinicAppointmentManager.Infrastructure**: Implements data access using Entity Framework Core.
-  - **DbContext**: `ClinicDbContext` with DbSets for all main entities.
-  - **Configurations**: EntityTypeConfiguration classes for all entities.
-  - **Migrations**: Initial migration and model snapshot present, indicating the database schema is managed.
-- **ClinicAppointmentManager.Services**: Intended for business logic and service classes. No service logic implemented yet.
-
 ## Implemented Features
 - **Domain Model**: All main entities and relationships are defined.
 - **Repository Pattern**: Interfaces for generic and specific repositories.
 - **EF Core Integration**: DbContext, entity configurations, and initial migration are set up.
-  
-## Not Yet Implemented
+- **Authentication, authorization, and user management**
 - API controllers and endpoints
 - Concrete repository and Unit of Work implementations
 - Business logic/services in the Services project
-- Authentication, authorization, and user management
 
-## Getting Started
-1. **Database**: Update the connection string in `appsettings.json` as needed. The initial migration is present; run EF Core migrations to set up the database.
-2. **Build**: Open the solution in Visual Studio 2022.
+  
+## Not Yet Implemented
+- Patient Controller & Service
 
-## Next Steps
-- Implement API controllers for CRUD operations on clinics, doctors, patients, appointments, and specialties.
-- Add repository and service implementations.
-- Expand business logic in the Services project.
-- Add authentication/authorization.
-- 
 ---
 *This README reflects the current state of the project and will be updated as development progresses.*
+
