@@ -1,5 +1,3 @@
-
-using System;
 using ClinicAppointmentManager.Core.Interfaces;
 using ClinicAppointmentManager.Infrastructure;
 using ClinicAppointmentManager.Infrastructure.Data;
@@ -7,8 +5,8 @@ using ClinicAppointmentManager.Services;
 using ClinicAppointmentManager.Services.Interfaces;
 using ClinicAppointmentManager.Services.Validators;
 using FluentValidation;
-using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,8 +25,6 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IDoctorService, DoctorService>();
 builder.Services.AddScoped<IClinicService, ClinicService>();
 builder.Services.AddScoped<ISpecialtyService, SpecialtyService>();
-builder.Services.AddScoped<IAppointmentService, AppointmentService>();
-
 
 builder.Services.AddValidatorsFromAssemblyContaining<DoctorPostDtoValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<ClinicPostDtoValidator>();
