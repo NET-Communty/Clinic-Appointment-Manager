@@ -8,11 +8,8 @@
 - API controllers and endpoints
 - Concrete repository and Unit of Work implementations
 - Business logic/services in the Services project
-
-  
-## Not Yet Implemented
 - Patient Controller & Service
-
 ---
 *This README reflects the current state of the project and will be updated as development progresses.*
+
 
